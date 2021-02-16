@@ -14,3 +14,5 @@ function Search(props) {
         </form>
     )
 }
+
+export default Search;

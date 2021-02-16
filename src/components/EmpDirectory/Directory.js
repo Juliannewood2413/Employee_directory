@@ -6,6 +6,7 @@ import Card from 'react-bootstrap/Card';
 import Cards from './Cards';
 import Search from './Search';
 import API from '../../utils/API';
+import './Directory.css';
 
 class Directory extends Component {
     //setting state as empty to start
@@ -15,7 +16,7 @@ class Directory extends Component {
         searchResults: []
     };
 
-    
+    //populate landing page with initial results
     componentDidMount() {
         API.getDirectory()
         .then((res) => 
@@ -23,7 +24,6 @@ class Directory extends Component {
         .catch((err) => console.log(err));
     }
 
-    //need handle input change function, filter and sort functions
     handleInputChange = (event) => {
         const value = event.target.value;
         const resultsArray = this.state.results;
@@ -35,13 +35,15 @@ class Directory extends Component {
         
     }
 
+    //add handleByGender function here
+
 
 
     //render results
     render() {
         return (
-            <CardDeck>
-                <Container className="Card-Container" fluid>
+            <CardDeck className="searchCards">
+                <Container className="Card-Container" fluid="md">
                     <Cards searchResults={this.state.searchResults} />
                 </Container>
             </CardDeck>

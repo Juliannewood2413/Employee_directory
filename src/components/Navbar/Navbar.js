@@ -11,12 +11,12 @@ function NavbarComp() {
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">
-        <Nav.Link href="#home">Home</Nav.Link>
-        <Nav.Link href="#link">Link</Nav.Link>
+      <Button variant="outline-info">By Age</Button>
+      <Button variant="outline-info">By Gender</Button>
     
       </Nav>
       <Form inline>
-        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+        <FormControl type="text" placeholder="Search" className="search-form" />
         <Button variant="outline-info">Search</Button>
       </Form>
     </Navbar.Collapse>
