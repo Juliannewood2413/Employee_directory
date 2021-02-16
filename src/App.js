@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import NavbarComp from './components/Navbar/Navbar';
-import Cards from './components/EmpDirectory/Cards'
+import Cards from './components/EmpDirectory/Cards';
+import Directory from './components/EmpDirectory/Directory';
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
 
     <div>
     <NavbarComp />
-    <Cards />
+    <Directory />
     </div>
 
 

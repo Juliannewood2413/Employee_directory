@@ -1,56 +1,42 @@
 import React from "react";
-import CardDeck from 'react-bootstrap/CardDeck';
-import Card from 'react-bootstrap/Card';
+import {Card, Row, Col, Image, Button} from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
+import Directory from './Directory';
 
-function Cards() {
+function populateCards(props) {
+    console.log(props)
 
     return (
-        <CardDeck>
-  <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
-    <Card.Body>
-      <Card.Title>TEST</Card.Title>
-      <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This content is a little bit longer.
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
-  <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
-    <Card.Body>
-      <Card.Title>Card title</Card.Title>
-      <Card.Text>
-        This card has supporting text below as a natural lead-in to additional
-        content.{' '}
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
-  <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
-    <Card.Body>
-      <Card.Title>Card title</Card.Title>
-      <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This card has even longer content than the first to
-        show that equal height action.
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
-</CardDeck>
+        <>
+    {props.searchResults.map((result) => (
+        <Card className="Directory-cards" key={result.login.uuid}>
+            <Row>
+                <Col className="Img-Card-Col">
+                    <Image src={result.picture.medium} variant="top" className="Img-card"></Image>
+                </Col>
+            </Row>
+            <Card.Body>
+                <Card.Title>{result.name.first + " " + result.name.last}</Card.Title>
+                <Card.Text className="Card-text">
+                    Age: {result.dob.age}
+                </Card.Text>
+                <Card.Text className="Card-text">
+                    City: {result.location.city}
+                </Card.Text>
+                <Card.Text className="Card-text">
+                    State: {result.location.state}
+                </Card.Text>
+            </Card.Body>
+
+        </Card>
+
+
+
+    ))}
+        </>
 
 
     )
 }
 
-export default Cards;
+export default populateCards;
