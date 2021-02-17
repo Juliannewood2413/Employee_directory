@@ -35,15 +35,12 @@ class Directory extends Component {
         
     }
 
-    //add handleByGender function here
-
-
 
     //render results
     render() {
         return (
             <CardDeck className="searchCards">
-                <Container className="Card-Container" fluid="md">
+                <Container className="Card-Container" fluid="sm">
                     <Cards searchResults={this.state.searchResults} />
                 </Container>
             </CardDeck>
