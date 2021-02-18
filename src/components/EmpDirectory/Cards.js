@@ -1,7 +1,7 @@
 import React from "react";
 import {Card, Row, Col, Image, CardDeck} from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Directory from './Directory';
+
 
 function populateCards(props) {
     console.log(props)

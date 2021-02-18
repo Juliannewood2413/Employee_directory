@@ -2,4 +2,11 @@ html,
 body {
   /* background-color: rgb(226, 226, 226); */
   background-image: url("./components/bluebkgrd.jpg");
+  font-family: "Sintony", sans-serif;
+}
+
+.seeAll {
+  text-align: center;
+  /* width: 18rem; */
+  display: grid;
 }
