@@ -2,7 +2,7 @@ import React from "react";
 import {Card, Row, Col, Image, CardDeck} from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
+//add phone number to employee card
 function populateCards(props) {
     console.log(props)
 
@@ -29,6 +29,9 @@ function populateCards(props) {
                 </Card.Text>
                 <Card.Text className="Card-text">
                     Email: {result.email}
+                </Card.Text>
+                <Card.Text className="Card-text">
+                    Phone: {result.phone}
                 </Card.Text>
             </Card.Body>
 

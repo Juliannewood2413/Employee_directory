@@ -18,7 +18,7 @@ function NavbarComp(props) {
     
       </Nav>
       <Form inline>
-        <FormControl type="text" placeholder="Search" className="search-form" onChange={props.searchFunction} />
+        <FormControl type="text" placeholder="Search by Name:" className="search-form" onChange={props.searchFunction} />
         <Button variant="outline-info" className="searchBtn">Search</Button>
       </Form>
     </Navbar.Collapse>
