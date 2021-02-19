@@ -31,7 +31,6 @@ class Main extends Component {
 
     handleByAge = (event) => {
         event.preventDefault();
-        //add choice - either youngest to oldest or oldest to youngest
         const unFiltered = this.state.searchResults;
         const filteredAge = unFiltered.sort(function (a,b) {
           return b.dob.age - a.dob.age;
@@ -41,12 +40,23 @@ class Main extends Component {
         })
     }
 
-    //add alphabetical filter
+    handleAlphabetical = (event) => {
+        event.preventDefault();
+       
+        const unFiltered = this.state.searchResults; 
+        //OR const unFiltered = [...this.state.searchResults]
+        const filteredAlpha = unFiltered.sort((a,b) => {
+            return a.name.first > b.name.first;
+        });
+        this.setState({
+            searchResults: filteredAlpha
+        })
+    }
 
     render(){
         return (
             <>
-            <NavbarComp searchFunction= {this.handleInputChange}handleByAge= {this.handleByAge}></NavbarComp>
+            <NavbarComp searchFunction= {this.handleInputChange}handleByAge= {this.handleByAge} handleAlphabetical= {this.handleAlphabetical}></NavbarComp>
             <Directory directory={this.state.searchResults}></Directory>
             </>
         )

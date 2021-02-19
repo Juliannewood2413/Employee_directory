@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, Navbar, Button, Form, FormControl } from "react-bootstrap";
+import { Nav, Navbar, Button, Form, FormControl, DropdownButton, Dropdown} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./style.css";
 
@@ -13,7 +13,11 @@ function NavbarComp(props) {
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">
-      <Button className="ageBtn" onClick={props.handleByAge} variant="outline-info" >By Age</Button>
+      <DropdownButton id="dropdown-basic-button" title="Filter by:" variant="info">
+        <Dropdown.Item href="#/action-1" onClick={props.handleAlphabetical}>Alphabetical</Dropdown.Item>
+        <Dropdown.Item href="#/action-2" onClick={props.handleByAge}>Age</Dropdown.Item>
+      </DropdownButton>
+      {/* <Button className="ageBtn" onClick={props.handleByAge} variant="outline-info" >By Age</Button> */}
       {/* <Button className="genderBtn" onClick ={handleByGender}variant="outline-info" >By Gender</Button> */}
     
       </Nav>
