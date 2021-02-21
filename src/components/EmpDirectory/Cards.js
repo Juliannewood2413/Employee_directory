@@ -9,7 +9,7 @@ function populateCards(props) {
     return (
         <>
     {props.searchResults.map((result) => (
-        <CardDeck className="seeAll">
+        <CardDeck className="seeAll" fluid="sm">
         <Card className="Directory-cards" key={result.login.uuid}>
             <Row>
                 <Col className="Img-Card-Col">

@@ -21,8 +21,7 @@ class Main extends Component {
     handleInputChange = (event) => {
         const value = event.target.value;
         const resultsArray = this.state.results;
-        // alert('this button was clicked')
-        console.log(value)
+        // console.log(value)
         const directoryList = resultsArray.filter((empName) => empName.name.first.toLowerCase().includes(value.toLowerCase()) || empName.name.last.toLowerCase().includes(value.toLowerCase()));
         this.setState({
             searchResults: directoryList,
