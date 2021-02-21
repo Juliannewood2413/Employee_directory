@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Employee_directory/static/css/main.fec82173.chunk.css",
+    "main.js": "/Employee_directory/static/js/main.fe8335a9.chunk.js",
+    "main.js.map": "/Employee_directory/static/js/main.fe8335a9.chunk.js.map",
+    "runtime-main.js": "/Employee_directory/static/js/runtime-main.1956f8f2.js",
+    "runtime-main.js.map": "/Employee_directory/static/js/runtime-main.1956f8f2.js.map",
+    "static/css/2.150d169a.chunk.css": "/Employee_directory/static/css/2.150d169a.chunk.css",
+    "static/js/2.e93dd7a4.chunk.js": "/Employee_directory/static/js/2.e93dd7a4.chunk.js",
+    "static/js/2.e93dd7a4.chunk.js.map": "/Employee_directory/static/js/2.e93dd7a4.chunk.js.map",
+    "index.html": "/Employee_directory/index.html",
+    "static/css/2.150d169a.chunk.css.map": "/Employee_directory/static/css/2.150d169a.chunk.css.map",
+    "static/css/main.fec82173.chunk.css.map": "/Employee_directory/static/css/main.fec82173.chunk.css.map",
+    "static/js/2.e93dd7a4.chunk.js.LICENSE.txt": "/Employee_directory/static/js/2.e93dd7a4.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/Employee_directory/static/media/bluebkgrd.f62fa06f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1956f8f2.js",
+    "static/css/2.150d169a.chunk.css",
+    "static/js/2.e93dd7a4.chunk.js",
+    "static/css/main.fec82173.chunk.css",
+    "static/js/main.fe8335a9.chunk.js"
+  ]
+}
