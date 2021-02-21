@@ -7,7 +7,8 @@ class Main extends Component {
     state = {
         search: '',
         results: [],
-        searchResults: []
+        searchResults: [],
+        alphabetical: 'az'
     };
 
     componentDidMount() {
@@ -42,15 +43,12 @@ class Main extends Component {
 
     handleAlphabetical = (event) => {
         event.preventDefault();
-       
-        const unFiltered = this.state.searchResults; 
-        //OR const unFiltered = [...this.state.searchResults]
-        const filteredAlpha = unFiltered.sort((a,b) => {
-            return a.name.first > b.name.first;
-        });
-        this.setState({
-            searchResults: filteredAlpha
-        })
+        const unFilteredAlpha = this.state.searchResults;
+        const filteredAlpha= unFilteredAlpha.sort((a,b) => 
+       a.name.first > b.name.first ? 1 : -1);
+       this.setState({
+           searchResults: filteredAlpha
+       })
     }
 
     render(){
